@@ -2,16 +2,14 @@
 export default {
   data() {
     return{
-      img: img
+      
     }
   }
 }
 </script>
 
 <template>
-  <div class="container">
-    <img src="../assets/img/dc-logo.png" alt="img">
-  </div>
+
 </template>
 
 <style scoped>

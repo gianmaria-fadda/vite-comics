@@ -12,18 +12,13 @@ import AppHeader from './components/AppHeader.vue';
 export default {
   data() {
     return{
-      count: 0
+      
     }
   },
 
   // 2) Dichiarazione del componente
   components: {
     AppHeader
-  },
-  methods: {
-    incrementCount() {
-      this.count++;
-    }
   }
 }
 </script>
@@ -32,18 +27,8 @@ export default {
   <!-- 3) Utilizzo del componente -->
   <AppHeader />
 
-  <div>
-
-    <button @click="incrementCount()">
-      {{ count }}
-    </button>
-
-  </div>
-
 </template>
 
-<style scoped>
-div {
-  text-align: center;
-}
+<style lang="sscs" scoped>
+
 </style>
