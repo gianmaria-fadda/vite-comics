@@ -2,18 +2,55 @@
 export default {
   data() {
     return{
-      img: img
+      link: [
+        'CHARACTER',
+        'COMICS',
+        'MOVIES',
+        'TV',
+        'GAMES',
+        'COLLECTIBLES',
+        'VIDEOS',
+        'FANS',
+        'NEWS',
+        'SHOP',
+      ]
     }
   }
 }
 </script>
 
 <template>
-  <div class="container">
-    <img src="../assets/img/dc-logo.png" alt="img">
-  </div>
+  <header>
+    <div class="container">
+      <img src="../assets/img/dc-logo.png" alt="img">
+  
+      <ul>
+        <li v-for="(link, index) in link">
+          {{ link }}
+        </li>
+      </ul>
+    </div>
+  </header>
 </template>
 
-<style scoped>
-
+<style lang="sscs" scoped>
+header {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 80px;
+      padding: 20px 0;
+      object-fit: contain;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      li {
+        padding: 0 15px;
+      }
+    }
+  }
+}
 </style>

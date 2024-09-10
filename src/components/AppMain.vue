@@ -12,6 +12,6 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="sscs" scoped>
 
 </style>
