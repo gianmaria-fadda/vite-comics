@@ -33,7 +33,7 @@ export default {
   </header>
 </template>
 
-<style lang="sscs" scoped>
+<style scoped>
 header {
   .container {
     display: flex;
