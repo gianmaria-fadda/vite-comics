@@ -49,6 +49,8 @@ header {
       align-items: center;
       li {
         padding: 0 15px;
+        font-weight: bold;
+        opacity: .7;
       }
     }
   }
