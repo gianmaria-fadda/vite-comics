@@ -1,4 +1,6 @@
 <script>
+import SingleComics from './SingleComics.vue';
+
 export default {
   data() {
     return{
@@ -83,9 +85,12 @@ export default {
           "type": "graphic novel",
       },
       ]
-    }
+    };
+  },
+  components: {
+    SingleComics
   }
-}
+};
 </script>
 
 <template>
@@ -98,17 +103,7 @@ export default {
       </h1>
 
       <div class="dc-container">
-        <div v-for="(comics, i) in comics">
-          <div>
-            <img :src="comics.thumb" :alt="comics.series">
-          </div>
-
-          <div>
-            <p>
-              {{ comics.series }}
-            </p>
-          </div>
-        </div>
+        <SingleComics v-for="(comics, i) in comics" :key="i"/>
       </div>
     </div>
     <div class="container">
