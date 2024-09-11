@@ -1,18 +1,20 @@
 <script>
 export default {
-  
+  props: {
+    product: Object
+  }
 }
 </script>
 
 <template>
   <div class="dc-items">
     <div>
-      <img src="" :alt="Titolo">
+      <img :src="product.thumb" :alt="product.series">
     </div>
 
     <div>
       <p>
-        Titolo
+        {{ product.series }}
       </p>
     </div>
   </div>

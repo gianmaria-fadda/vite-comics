@@ -103,7 +103,10 @@ export default {
       </h1>
 
       <div class="dc-container">
-        <SingleComics v-for="(comics, i) in comics" :key="i"/>
+        <SingleComics
+          v-for="(comics, i) in comics"
+          :key="i"
+          :product="comics"/>
       </div>
     </div>
     <div class="container">
