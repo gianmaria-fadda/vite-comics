@@ -91,7 +91,25 @@ export default {
 <template>
 <main>
     <div class="container">
-      <a href="#">&rarr; Content click here &larr;</a>
+      <h1>
+
+        CURRENT SERIES 
+
+      </h1>
+
+      <div class="dc-container">
+        <div v-for="(comics, i) in comics">
+          <div>
+            <img :src="comics.thumb" :alt="comics.series">
+          </div>
+
+          <div>
+            <p>
+              {{ comics.series }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div>
@@ -140,31 +158,59 @@ export default {
 <style scoped>
 main {
   background-color: #1C1C1C;
+  
   .container {
     padding: 50px 0;
-    a {
-      text-decoration: none;
+
+    h1 {
+      text-align: center;
+      width: 200px;
       color: white;
-      font-size: 2.5cap;
-      padding-left: 230px;
+      font-size: 1rem;
+      margin-left: 170px;
+      padding: 20px;
+      background-color: #0282F9;
+      margin-bottom: 20px;
+    }
+
+    .dc-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      > * {
+        padding: 10px 190px;
+        width: 25%;
+
+        p {
+          color: white;
+          text-align: center;
+          padding: 4px;
+        }
+      }
     }
   }
+
   .container:last-child {
     display: flex;
     justify-content: space-evenly;
     background-color: #0282F9;
     padding: 50px 200px;
+
     div {
       display: flex;
       align-items: center;
+
       img {
         width: 50px;
         object-fit: contain;
       }
+
       p {
         color: white;
         padding: 0 10px;
       }
+
       &:hover {
           cursor: pointer;
       }
