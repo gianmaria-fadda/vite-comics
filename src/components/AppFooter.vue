@@ -114,16 +114,29 @@ export default {
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@mixin flex-rule {
+  display: flex;
+}
+
+@mixin flex-rule-and-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin list-none {
+  list-style: none;
+}
+
 footer {
 
   .container:first-child {
     background-image: url(../assets/img/footer-bg.jpg);
-    display: flex;
-    justify-content: space-around;
+    @include flex-rule-and-around;
 
     .list {
-      display: flex;
+      @include flex-rule;
 
       .col {
         padding-top: 40px;
@@ -137,7 +150,7 @@ footer {
           padding-left: 0;
 
           li {
-            list-style: none;
+            @include list-none;
             padding: 1px 20px;
             color: #818181;
             font-size: .8rem;
@@ -154,8 +167,7 @@ footer {
     }
   }
   .container:last-child {
-    display: flex;
-    justify-content: space-around;
+    @include flex-rule-and-around;
     align-items: center;
     max-height: 100vh;
     background-color: #303030;
@@ -172,7 +184,7 @@ footer {
     }
 
     div:last-child {
-      display: flex;
+      @include flex-rule;
       align-items: center;
 
       p {

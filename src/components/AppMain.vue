@@ -156,11 +156,15 @@ export default {
 <style lang="scss" scoped>
 
 @mixin flex-rule {
-    display: flex;
+  display: flex;
+}
+
+@mixin blue-color-rule {
+  background-color: #0282F9;
 }
 
 @mixin white-color-rule {
-    color: white;
+  color: white;
 }
 
 main {
@@ -176,7 +180,7 @@ main {
       font-size: 1rem;
       margin-left: 170px;
       padding: 20px;
-      background-color: #0282F9;
+      @include blue-color-rule;
       margin-bottom: 20px;
     }
 
@@ -201,7 +205,7 @@ main {
   .container:last-child {
     @include flex-rule;
     justify-content: space-evenly;
-    background-color: #0282F9;
+    @include blue-color-rule;
     padding: 50px 200px;
 
     div {

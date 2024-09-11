@@ -33,19 +33,32 @@ export default {
   </header>
 </template>
 
-<style scoped>
-header {
-  .container {
+<style lang="scss" scoped>
+
+@mixin flex-rule {
+  display: flex;
+}
+
+@mixin flex-rule-and-around {
     display: flex;
     justify-content: space-around;
+}
+
+@mixin list-none {
+  list-style: none;
+}
+
+header {
+  .container {
+    @include flex-rule-and-around;
     img {
       width: 80px;
       padding: 20px 0;
       object-fit: contain;
     }
     ul {
-      list-style: none;
-      display: flex;
+      @include list-none;
+      @include flex-rule;
       align-items: center;
       li {
         padding: 0 15px;
