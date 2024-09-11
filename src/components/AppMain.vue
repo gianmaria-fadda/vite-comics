@@ -153,7 +153,16 @@ export default {
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@mixin flex-rule {
+    display: flex;
+}
+
+@mixin white-color-rule {
+    color: white;
+}
+
 main {
   background-color: #1C1C1C;
   
@@ -163,7 +172,7 @@ main {
     h1 {
       text-align: center;
       width: 200px;
-      color: white;
+      @include white-color-rule;
       font-size: 1rem;
       margin-left: 170px;
       padding: 20px;
@@ -172,7 +181,7 @@ main {
     }
 
     .dc-container {
-      display: flex;
+      @include flex-rule;
       justify-content: center;
       flex-wrap: wrap;
 
@@ -181,7 +190,7 @@ main {
         width: 25%;
 
         p {
-          color: white;
+          @include white-color-rule;
           text-align: center;
           padding: 4px;
         }
@@ -190,13 +199,13 @@ main {
   }
 
   .container:last-child {
-    display: flex;
+    @include flex-rule;
     justify-content: space-evenly;
     background-color: #0282F9;
     padding: 50px 200px;
 
     div {
-      display: flex;
+      @include flex-rule;
       align-items: center;
 
       img {
@@ -205,7 +214,7 @@ main {
       }
 
       p {
-        color: white;
+        @include white-color-rule;
         padding: 0 10px;
       }
 
