@@ -88,27 +88,54 @@ export default {
       </div>
     </div>
     <div class="container">
-      
+      <div>
+        <p>
+
+          SIGN UP NOW!
+          
+        </p>
+      </div>
+      <div>
+        <p>
+          FOLLOW US
+        </p>
+
+        <img src="../assets/img/footer-facebook.png" alt="facebook">
+
+        <img src="../assets/img/footer-periscope.png" alt="periscope">
+
+        <img src="../assets/img/footer-pinterest.png" alt="pinterest">
+
+        <img src="../assets/img/footer-twitter.png" alt="twitter">
+
+        <img src="../assets/img/footer-youtube.png" alt="youtube">
+      </div>
     </div>
   </footer>
 </template>
 
 <style scoped>
 footer {
+
   .container:first-child {
     background-image: url(../assets/img/footer-bg.jpg);
     display: flex;
     justify-content: space-around;
+
     .list {
       display: flex;
+
       .col {
         padding-top: 40px;
+
         h3 {
           color: white;
           padding: 15px 20px;
         }
+
         ul {
           padding-left: 0;
+
           li {
             list-style: none;
             padding: 1px 20px;
@@ -118,10 +145,45 @@ footer {
         }
       }
     }
+
     .row {
       img {
         width: 350px;
         object-fit: contain;
+      }
+    }
+  }
+  .container:last-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 100vh;
+    background-color: #303030;
+
+    div:first-child {
+      margin: 45px 0;
+
+      p {
+        font-weight: bold;
+        padding: 15px;
+        border: 1px solid #0282F9;
+        color: white;
+      }
+    }
+
+    div:last-child {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-weight: bold;
+        color: #0282F9;
+        padding: 0 10px;
+      }
+
+      img {
+        width: 35px;
+        margin: 0 10px;
       }
     }
   }
