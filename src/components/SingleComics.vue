@@ -22,16 +22,13 @@ export default {
 
 <style lang="scss" scoped>
 .dc-items {
-  
-  > * {
-    padding: 10px 190px;
-    width: 25%;
+  padding: 10px 190px;
+  width: 25%;
 
-    p {
-      color: white;
-      text-align: center;
-      padding: 4px;
-    }
+  p {
+    color: white;
+    text-align: center;
+    padding: 4px;
   }
 }
 </style>
