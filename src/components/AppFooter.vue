@@ -116,18 +116,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@mixin flex-rule {
-  display: flex;
-}
-
-@mixin flex-rule-and-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-@mixin list-none {
-  list-style: none;
-}
+@use '../assets/scss/partials/mixins.scss' as *;
 
 footer {
 

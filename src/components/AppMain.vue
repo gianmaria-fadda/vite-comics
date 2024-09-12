@@ -155,17 +155,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@mixin flex-rule {
-  display: flex;
-}
-
-@mixin blue-color-rule {
-  background-color: #0282F9;
-}
-
-@mixin white-color-rule {
-  color: white;
-}
+@use '../assets/scss/partials/mixins.scss' as *;
 
 main {
   background-color: #1C1C1C;
